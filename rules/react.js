@@ -35,6 +35,15 @@ module.exports = {
       ],
     }],
 
+    // disallow dangling underscores in identifiers
+    // https://eslint.org/docs/rules/no-underscore-dangle
+    'no-underscore-dangle': ['error', {
+      allow: [
+        '__PRELOADED_STATE__', // Redux
+        '__REDUX_DEVTOOLS_EXTENSION__', // Redux DevTools Extension
+      ]
+    }],
+
     // Prevent missing displayName in a React component definition
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
     'react/display-name': ['off', { ignoreTranspilerName: false }],
