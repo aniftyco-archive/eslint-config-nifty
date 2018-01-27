@@ -1,0 +1,43 @@
+{
+  "name": "eslint-config-nifty",
+  "version": "0.1.0",
+  "description": "NiftyCo's base JavaScript ESLint config.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aniftyco/eslint-config-nifty.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "niftyco",
+    "javascript"
+  ],
+  "author": "Josh Manders (https://twitter.com/joshmanders)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aniftyco/eslint-config-nifty/issues"
+  },
+  "homepage": "https://github.com/aniftyco/eslint-config-nifty",
+  "engines": {
+    "node": ">= 8"
+  },
+  "dependencies": {
+    "eslint-restricted-globals": "^0.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-find-rules": "^3.1.1",
+    "eslint-plugin-import": "^2.8.0"
+  },
+  "peerDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-find-rules": "^3.1.1",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.0"
+  }
+}
