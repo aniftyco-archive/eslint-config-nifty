@@ -564,7 +564,7 @@ module.exports = {
 
     // enforce case style for filenames
     // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/filename-case.md
-    'unicorn/filename-case': ['error', { case: 'kebabCase' }],
+    'unicorn/filename-case': 'off',
 
     // enforce specific rules to disable in eslint-disable comments
     // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-abusive-eslint-disable.md
@@ -638,6 +638,7 @@ module.exports = {
 
     // disallow unsafe regular expressions
     // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-unsafe-regex.md
-    'unicorn/no-unsafe-regex': 'error',
+    // TODO: Not released yet
+    // 'unicorn/no-unsafe-regex': 'error',
   },
 };
