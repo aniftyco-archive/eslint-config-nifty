@@ -612,7 +612,7 @@ module.exports = {
 
     // prevents passing a function reference directly to iterator methods
     // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-fn-reference-in-iterator.md
-    'unicorn/no-fn-reference-in-iterator': 'error',
+    'unicorn/no-fn-reference-in-iterator': 'off',
 
     // enforce importing index files with .
     // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/import-index.md
