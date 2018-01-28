@@ -628,11 +628,13 @@ module.exports = {
 
     // prefer the spread operator over Array.from()
     // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/prefer-spread.md
-    'unicorn/prefer-spread': 'error',
+    // TODO: Not released yet
+    // 'unicorn/prefer-spread': 'error',
 
     // enforce passing a message value when throwing a built-in error
     // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/error-message.md
-    'unicorn/error-message': 'error',
+    // TODO: Not released yet
+    // 'unicorn/error-message': 'error',
 
     // disallow unsafe regular expressions
     // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-unsafe-regex.md
