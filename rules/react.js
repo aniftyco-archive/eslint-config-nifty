@@ -211,6 +211,10 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
     'react/self-closing-comp': 'error',
 
+    // require specific order of class members
+    // https://github.com/bryanrsmith/eslint-plugin-sort-class-members#configuration
+    'sort-class-members/sort-class-members': 'off',
+
     // Enforce component methods order
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
     'react/sort-comp': ['error', {
