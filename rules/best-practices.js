@@ -361,6 +361,10 @@ module.exports = {
 
     // require or disallow Yoda conditions
     // https://eslint.org/docs/rules/yoda
-    yoda: 'error'
-  }
+    yoda: 'error',
+
+    // Prefer object spread over Object.assign
+    // https://github.com/bryanrsmith/eslint-plugin-prefer-object-spread
+    'prefer-object-spread/prefer-object-spread': 'error',
+  },
 };

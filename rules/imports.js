@@ -1,34 +1,4 @@
 module.exports = {
-  env: {
-    es6: true
-  },
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module'
-  },
-  plugins: [
-    'import'
-  ],
-
-  settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.mjs', '.js', '.json']
-      }
-    },
-    'import/extensions': [
-      '.js',
-      '.mjs',
-      '.jsx',
-    ],
-    'import/core-modules': [
-    ],
-    'import/ignore': [
-      'node_modules',
-      '\\.(coffee|scss|css|less|hbs|svg|json)$',
-    ],
-  },
-
   rules: {
     // Static analysis:
 
@@ -141,7 +111,7 @@ module.exports = {
     // Enforce a convention in module import order
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
     // TODO: enable?
-    'import/order': ['off', {
+    'import/order': ['error', {
       groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
       'newlines-between': 'never',
     }],
@@ -211,5 +181,23 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/blob/98acd6afd04dcb6920b81330114e146dc8532ea4/docs/rules/exports-last.md
     // TODO: enable?
     'import/exports-last': 'off',
+  },
+
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.mjs', '.js', '.json'],
+      },
+    },
+    'import/extensions': [
+      '.js',
+      '.mjs',
+      '.jsx',
+    ],
+    'import/core-modules': [],
+    'import/ignore': [
+      'node_modules',
+      '\\.(coffee|scss|css|less|hbs|svg|json)$',
+    ],
   },
 };

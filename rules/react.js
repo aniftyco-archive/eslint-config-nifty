@@ -1,14 +1,4 @@
 module.exports = {
-  plugins: [
-    'react',
-  ],
-
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
-
   // View link below for react rules documentation
   // https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
   rules: {
@@ -41,7 +31,7 @@ module.exports = {
       allow: [
         '__PRELOADED_STATE__', // Redux
         '__REDUX_DEVTOOLS_EXTENSION__', // Redux DevTools Extension
-      ]
+      ],
     }],
 
     // Prevent missing displayName in a React component definition
@@ -202,7 +192,7 @@ module.exports = {
     'react/prop-types': ['error', {
       ignore: [],
       customValidators: [],
-      skipUndeclared: false
+      skipUndeclared: false,
     }],
 
     // Prevent missing React when using JSX
@@ -229,7 +219,7 @@ module.exports = {
         '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
         'everything-else',
         '/^render.+$/',
-        'render'
+        'render',
       ],
     }],
 
@@ -315,7 +305,7 @@ module.exports = {
     'react/jsx-tag-spacing': ['error', {
       closingSlash: 'never',
       beforeSelfClosing: 'always',
-      afterOpening: 'never'
+      afterOpening: 'never',
     }],
 
     // Enforce spaces before the closing bracket of self-closing JSX elements
@@ -366,21 +356,4 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md
     'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }]
   },
-
-  settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.json']
-      }
-    },
-    react: {
-      pragma: 'React',
-      version: '16.0'
-    },
-    propWrapperFunctions: [
-      'forbidExtraProps', // https://www.npmjs.com/package/airbnb-prop-types
-      'exact', // https://www.npmjs.com/package/prop-types-exact
-      'Object.freeze', // https://tc39.github.io/ecma262/#sec-object.freeze
-    ],
-  }
 };

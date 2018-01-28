@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    node: true
+    node: true,
   },
 
   rules: {
@@ -38,7 +38,7 @@ module.exports = {
 
     // disallow process.exit()
     // https://eslint.org/docs/rules/no-process-exit
-    'no-process-exit': 'off',
+    'no-process-exit': 'error',
 
     // restrict usage of specified node modules
     // https://eslint.org/docs/rules/no-restricted-modules
@@ -47,5 +47,5 @@ module.exports = {
     // disallow use of synchronous methods (off by default)
     // https://eslint.org/docs/rules/no-sync
     'no-sync': 'off',
-  }
+  },
 };

@@ -70,7 +70,7 @@ module.exports = {
         ObjectPattern: false,
         VariableDeclaration: false,
         NewExpression: false,
-      }
+      },
     }],
 
     // disallow padding inside computed properties
@@ -93,7 +93,7 @@ module.exports = {
     // assigned
     // https://eslint.org/docs/rules/func-name-matching
     'func-name-matching': ['off', 'always', {
-      includeCommonJSModuleExports: false
+      includeCommonJSModuleExports: false,
     }],
 
     // require function expressions to have a name
@@ -135,14 +135,14 @@ module.exports = {
       // MemberExpression: null,
       FunctionDeclaration: {
         parameters: 1,
-        body: 1
+        body: 1,
       },
       FunctionExpression: {
         parameters: 1,
-        body: 1
+        body: 1,
       },
       CallExpression: {
-        arguments: 1
+        arguments: 1,
       },
       ArrayExpression: 1,
       ObjectExpression: 1,
@@ -150,7 +150,7 @@ module.exports = {
       flatTernaryExpressions: false,
       // list derived from https://github.com/benjamn/ast-types/blob/HEAD/def/jsx.js
       ignoredNodes: ['JSXElement', 'JSXElement > *', 'JSXAttribute', 'JSXIdentifier', 'JSXNamespacedName', 'JSXMemberExpression', 'JSXSpreadAttribute', 'JSXExpressionContainer', 'JSXOpeningElement', 'JSXClosingElement', 'JSXText', 'JSXEmptyExpression', 'JSXSpreadChild'],
-      ignoreComments: false
+      ignoreComments: false,
     }],
 
     // specify whether double or single quotes should be used in JSX attributes
@@ -169,8 +169,8 @@ module.exports = {
       overrides: {
         return: { after: true },
         throw: { after: true },
-        case: { after: true }
-      }
+        case: { after: true },
+      },
     }],
 
     // enforce position of line comments
@@ -189,6 +189,22 @@ module.exports = {
     // require or disallow an empty line between class members
     // https://eslint.org/docs/rules/lines-between-class-members
     'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: false }],
+
+    // require specific order of class members
+    // https://github.com/bryanrsmith/eslint-plugin-sort-class-members#configuration
+    'sort-class-members/sort-class-members': ['error', {
+      order: [
+        '[static-properties]',
+        '[static-methods]',
+        '[properties]',
+        '[accessor-pairs]',
+        '[arrow-function-properties]',
+        'constructor',
+        '[methods]',
+        '[everything-else]',
+      ],
+      accessorPairPositioning: 'getThenSet',
+    }],
 
     // enforces empty lines around comments
     // https://eslint.org/docs/rules/lines-around-comment
@@ -220,7 +236,7 @@ module.exports = {
     'max-lines': ['off', {
       max: 300,
       skipBlankLines: true,
-      skipComments: true
+      skipComments: true,
     }],
 
     // specify the maximum depth callbacks can be nested
@@ -311,9 +327,9 @@ module.exports = {
         ['&', '|', '^', '~', '<<', '>>', '>>>'],
         ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
         ['&&', '||'],
-        ['in', 'instanceof']
+        ['in', 'instanceof'],
       ],
-      allowSamePrecedence: false
+      allowSamePrecedence: false,
     }],
 
     // disallow mixed spaces and tabs for indentation
@@ -415,7 +431,7 @@ module.exports = {
     // https://eslint.org/docs/rules/object-curly-newline
     'object-curly-newline': ['error', {
       ObjectExpression: { minProperties: 4, multiline: true, consistent: true },
-      ObjectPattern: { minProperties: 4, multiline: true, consistent: true }
+      ObjectPattern: { minProperties: 4, multiline: true, consistent: true },
     }],
 
     // enforce "same line" or "multiple line" on object properties.
@@ -489,7 +505,7 @@ module.exports = {
     'space-before-function-paren': ['error', {
       anonymous: 'always',
       named: 'never',
-      asyncArrow: 'always'
+      asyncArrow: 'always',
     }],
 
     // require or disallow spaces inside parentheses
@@ -505,8 +521,7 @@ module.exports = {
     'space-unary-ops': ['error', {
       words: true,
       nonwords: false,
-      overrides: {
-      },
+      overrides: {},
     }],
 
     // require or disallow a space immediately following the // or /* in a comment
@@ -520,7 +535,7 @@ module.exports = {
         exceptions: ['-', '+'],
         markers: ['=', '!'], // space here to support sprockets directives
         balanced: true,
-      }
+      },
     }],
 
     // Enforce spacing around colons of switch statements
@@ -537,6 +552,90 @@ module.exports = {
 
     // require regex literals to be wrapped in parentheses
     // https://eslint.org/docs/rules/wrap-regex
-    'wrap-regex': 'off'
-  }
+    'wrap-regex': 'off',
+
+    // enforce err param name in catch clause
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/catch-error-name.md
+    'unicorn/catch-error-name': ['error', { name: 'err' }],
+
+    // enforce explicitly checking the length of a value array in if condition
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/explicit-length-check.md
+    'unicorn/explicit-length-check': ['error', { 'non-zero': 'not-equal' }],
+
+    // enforce case style for filenames
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/filename-case.md
+    'unicorn/filename-case': ['error', { case: 'kebabCase' }],
+
+    // enforce specific rules to disable in eslint-disable comments
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-abusive-eslint-disable.md
+    'unicorn/no-abusive-eslint-disable': 'error',
+
+    // disallow process.exit()
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-process-exit.md
+    'unicorn/no-process-exit': 'error',
+
+    // require new when throwing an error
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/throw-new-error.md
+    'unicorn/throw-new-error': 'error',
+
+    // enforce lowercase identifier and uppercase value for number literals
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/number-literal-case.md
+    'unicorn/number-literal-case': 'error',
+
+    // require escape sequences to use uppercase values
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/escape-case.md
+    'unicorn/escape-case': 'error',
+
+    // require Array.isArray() instead of instanceof Array
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-array-instanceof.md
+    'unicorn/no-array-instanceof': 'error',
+
+    // enforce the use of Buffer.from() and Buffer.alloc() instead of deprecated new Buffer()
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-new-buffer.md
+    'unicorn/no-new-buffer': 'error',
+
+    // enforce the use of unicode escapes instead of hexadecimal escapes
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-hex-escape.md
+    'unicorn/no-hex-escape': 'error',
+
+    // enforce correct Error subclassing
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/custom-error-definition.md
+    'unicorn/custom-error-definition': 'error',
+
+    // prefer String#startsWith & String#endsWith over more complex alternatives
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/prefer-starts-ends-with.md
+    'unicorn/prefer-starts-ends-with': 'error',
+
+    // enforce throwing TypeError in type checking conditions
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/prefer-type-error.md
+    'unicorn/prefer-type-error': 'error',
+
+    // prevents passing a function reference directly to iterator methods
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-fn-reference-in-iterator.md
+    'unicorn/no-fn-reference-in-iterator': 'error',
+
+    // enforce importing index files with .
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/import-index.md
+    'unicorn/import-index': 'error',
+
+    // enforce the use of new for all builtins, except String, Number and Boolean
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/new-for-builtins.md
+    'unicorn/new-for-builtins': 'error',
+
+    // enforce the use of regex shorthands to improve readability
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/regex-shorthand.md
+    'unicorn/regex-shorthand': 'error',
+
+    // prefer the spread operator over Array.from()
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/prefer-spread.md
+    'unicorn/prefer-spread': 'error',
+
+    // enforce passing a message value when throwing a built-in error
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/error-message.md
+    'unicorn/error-message': 'error',
+
+    // disallow unsafe regular expressions
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-unsafe-regex.md
+    'unicorn/no-unsafe-regex': 'error',
+  },
 };
