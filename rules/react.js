@@ -44,7 +44,7 @@ module.exports = {
 
     // Enforce boolean attributes notation in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
-    'react/jsx-boolean-value': ['error', 'never', { always: [] }],
+    'react/jsx-boolean-value': ['error', 'always', { always: [] }],
 
     // Validate closing bracket location in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
@@ -71,7 +71,7 @@ module.exports = {
 
     // Validate JSX has key prop when in array or iterator
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
-    'react/jsx-key': 'off',
+    'react/jsx-key': 'error',
 
     // Limit maximum of props on a single line in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
@@ -157,7 +157,7 @@ module.exports = {
 
     // Prevent direct mutation of this.state
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
-    'react/no-direct-mutation-state': 'off',
+    'react/no-direct-mutation-state': 'error',
 
     // Prevent usage of isMounted
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md
@@ -283,8 +283,7 @@ module.exports = {
     // Prevent unused propType definitions
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
     'react/no-unused-prop-types': ['error', {
-      customValidators: [
-      ],
+      customValidators: [],
       skipShapeProps: true,
     }],
 
@@ -343,7 +342,7 @@ module.exports = {
 
     // Enforces consistent naming for boolean props
     // https://github.com/yannickcr/eslint-plugin-react/blob/73abadb697034b5ccb514d79fb4689836fe61f91/docs/rules/boolean-prop-naming.md
-    'react/boolean-prop-naming': ['off', {
+    'react/boolean-prop-naming': ['error', {
       propTypeNames: ['bool', 'mutuallyExclusiveTrueProps'],
       rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+',
     }],

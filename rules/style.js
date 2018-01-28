@@ -213,7 +213,7 @@ module.exports = {
     // require or disallow newlines around directives
     // https://eslint.org/docs/rules/lines-around-directive
     'lines-around-directive': ['error', {
-      before: 'always',
+      before: 'never',
       after: 'always',
     }],
 
@@ -279,10 +279,10 @@ module.exports = {
 
     // allow/disallow an empty newline after var statement
     // https://eslint.org/docs/rules/newline-after-var
-    'newline-after-var': 'off',
+    'newline-after-var': 'error',
 
     // https://eslint.org/docs/rules/newline-before-return
-    'newline-before-return': 'off',
+    'newline-before-return': 'error',
 
     // enforces new line after each method call in the chain to make it
     // more readable and easy to maintain
@@ -303,7 +303,7 @@ module.exports = {
 
     // disallow comments inline after code
     // https://eslint.org/docs/rules/no-inline-comments
-    'no-inline-comments': 'off',
+    'no-inline-comments': 'warn',
 
     // disallow if as the only statement in an else block
     // https://eslint.org/docs/rules/no-lonely-if
@@ -342,7 +342,7 @@ module.exports = {
 
     // disallow multiple empty lines and only one newline at the end
     // https://eslint.org/docs/rules/no-multiple-empty-lines
-    'no-multiple-empty-lines': ['error', { max: 2, maxEOF: 1 }],
+    'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1 }],
 
     // disallow negated conditions
     // https://eslint.org/docs/rules/no-negated-condition
@@ -425,7 +425,7 @@ module.exports = {
 
     // require padding inside curly braces
     // https://eslint.org/docs/rules/object-curly-spacing
-    'object-curly-spacing': ['error', 'always'],
+    'object-curly-spacing': ['error', 'never'],
 
     // enforce line breaks between braces
     // https://eslint.org/docs/rules/object-curly-newline

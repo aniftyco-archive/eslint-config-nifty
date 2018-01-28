@@ -129,6 +129,7 @@ module.exports = {
     // disallow negating the left operand of relational operators
     // https://eslint.org/docs/rules/no-unsafe-negation
     'no-unsafe-negation': 'error',
+
     // disallow negation of the left operand of an in expression
     // deprecated in favor of no-unsafe-negation
     // https://eslint.org/docs/rules/no-negated-in-lhs
