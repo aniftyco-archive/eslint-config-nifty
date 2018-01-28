@@ -31,6 +31,7 @@ module.exports = {
       allow: [
         '__PRELOADED_STATE__', // Redux
         '__REDUX_DEVTOOLS_EXTENSION__', // Redux DevTools Extension
+        '__REDUX_DEVTOOLS_EXTENSION_COMPOSE__', // Redux DevTools Compose
       ],
     }],
 
