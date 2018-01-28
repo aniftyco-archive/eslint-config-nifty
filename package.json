@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-nifty",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "NiftyCo's JavaScript ESLint shared config.",
   "main": "index.js",
   "scripts": {
