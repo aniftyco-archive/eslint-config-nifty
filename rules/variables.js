@@ -40,7 +40,7 @@ module.exports = {
 
     // disallow use of undefined variable
     // https://eslint.org/docs/rules/no-undefined
-    'no-undefined': 'error',
+    'no-undefined': 'off',
 
     // disallow declaration of variables that are not used in the code
     // https://eslint.org/docs/rules/no-unused-vars
