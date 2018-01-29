@@ -16,6 +16,7 @@ module.exports = {
     './rules/style',
     './rules/variables',
   ].map(require.resolve),
+  parser: 'babel-eslint',
   env: {
     es6: true
   },
