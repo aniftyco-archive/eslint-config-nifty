@@ -572,7 +572,7 @@ module.exports = {
 
     // disallow process.exit()
     // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-process-exit.md
-    'unicorn/no-process-exit': 'error',
+    'unicorn/no-process-exit': 'off',
 
     // require new when throwing an error
     // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/throw-new-error.md
