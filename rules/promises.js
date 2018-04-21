@@ -50,6 +50,6 @@ module.exports = {
 
     // prefer async/await to the callback pattern
     // https://github.com/xjamundx/eslint-plugin-promise
-    'promise/prefer-await-to-callbacks': 'error',
+    'promise/prefer-await-to-callbacks': 'off',
   },
 };

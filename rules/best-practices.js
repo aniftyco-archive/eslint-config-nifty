@@ -18,7 +18,7 @@ module.exports = {
 
     // enforce that class methods use "this"
     // https://eslint.org/docs/rules/class-methods-use-this
-    'class-methods-use-this': ['error', {
+    'class-methods-use-this': ['off', {
       exceptMethods: [],
     }],
 
@@ -159,7 +159,7 @@ module.exports = {
 
     // disallow magic numbers
     // https://eslint.org/docs/rules/no-magic-numbers
-    'no-magic-numbers': ['error', {
+    'no-magic-numbers': ['off', {
       ignore: [],
       ignoreArrayIndexes: true,
       enforceConst: true,
@@ -228,40 +228,40 @@ module.exports = {
       property: 'callee',
       message: 'arguments.callee is deprecated',
     }, {
-      object: 'global',
-      property: 'isFinite',
-      message: 'Please use Number.isFinite instead',
-    }, {
-      object: 'self',
-      property: 'isFinite',
-      message: 'Please use Number.isFinite instead',
-    }, {
-      object: 'window',
-      property: 'isFinite',
-      message: 'Please use Number.isFinite instead',
-    }, {
-      object: 'global',
-      property: 'isNaN',
-      message: 'Please use Number.isNaN instead',
-    }, {
-      object: 'self',
-      property: 'isNaN',
-      message: 'Please use Number.isNaN instead',
-    }, {
-      object: 'window',
-      property: 'isNaN',
-      message: 'Please use Number.isNaN instead',
-    }, {
-      property: '__defineGetter__',
-      message: 'Please use Object.defineProperty instead.',
-    }, {
-      property: '__defineSetter__',
-      message: 'Please use Object.defineProperty instead.',
-    }, {
-      object: 'Math',
-      property: 'pow',
-      message: 'Use the exponentiation operator (**) instead.',
-    }],
+        object: 'global',
+        property: 'isFinite',
+        message: 'Please use Number.isFinite instead',
+      }, {
+        object: 'self',
+        property: 'isFinite',
+        message: 'Please use Number.isFinite instead',
+      }, {
+        object: 'window',
+        property: 'isFinite',
+        message: 'Please use Number.isFinite instead',
+      }, {
+        object: 'global',
+        property: 'isNaN',
+        message: 'Please use Number.isNaN instead',
+      }, {
+        object: 'self',
+        property: 'isNaN',
+        message: 'Please use Number.isNaN instead',
+      }, {
+        object: 'window',
+        property: 'isNaN',
+        message: 'Please use Number.isNaN instead',
+      }, {
+        property: '__defineGetter__',
+        message: 'Please use Object.defineProperty instead.',
+      }, {
+        property: '__defineSetter__',
+        message: 'Please use Object.defineProperty instead.',
+      }, {
+        object: 'Math',
+        property: 'pow',
+        message: 'Use the exponentiation operator (**) instead.',
+      }],
 
     // disallow use of assignment in return statement
     // https://eslint.org/docs/rules/no-return-assign

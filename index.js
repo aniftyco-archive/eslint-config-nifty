@@ -13,7 +13,6 @@ module.exports = {
     './rules/imports',
     './rules/node',
     './rules/promises',
-    './rules/style',
     './rules/variables',
   ].map(require.resolve),
   parser: 'babel-eslint',
