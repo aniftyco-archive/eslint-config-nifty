@@ -4,7 +4,7 @@ module.exports = {
   rules: {
     // Specify whether double or single quotes should be used in JSX attributes
     // https://eslint.org/docs/rules/jsx-quotes
-    'jsx-quotes': ['error', 'prefer-double'],
+    'jsx-quotes': ['off', 'prefer-double'],
 
     // enforce that class methods use "this"
     // https://eslint.org/docs/rules/class-methods-use-this
@@ -27,7 +27,7 @@ module.exports = {
 
     // disallow dangling underscores in identifiers
     // https://eslint.org/docs/rules/no-underscore-dangle
-    'no-underscore-dangle': ['error', {
+    'no-underscore-dangle': ['off', {
       allow: [
         '__PRELOADED_STATE__', // Redux
         '__REDUX_DEVTOOLS_EXTENSION__', // Redux DevTools Extension
@@ -41,7 +41,7 @@ module.exports = {
 
     // Forbid certain propTypes (any, array, object)
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
-    'react/forbid-prop-types': ['error', { forbid: ['any', 'array', 'object'] }],
+    'react/forbid-prop-types': ['off', { forbid: ['any', 'array', 'object'] }],
 
     // Enforce boolean attributes notation in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
@@ -49,15 +49,15 @@ module.exports = {
 
     // Validate closing bracket location in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
-    'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
+    'react/jsx-closing-bracket-location': ['off', 'line-aligned'],
 
     // Validate closing tag location in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md
-    'react/jsx-closing-tag-location': 'error',
+    'react/jsx-closing-tag-location': 'off',
 
     // Enforce or disallow spaces inside of curly braces in JSX attributes
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
-    'react/jsx-curly-spacing': ['error', 'never', { allowMultiline: true }],
+    'react/jsx-curly-spacing': ['off', 'never', { allowMultiline: true }],
 
     // Enforce event handler naming conventions in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
@@ -68,7 +68,7 @@ module.exports = {
 
     // Validate props indentation in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
-    'react/jsx-indent-props': ['error', 2],
+    'react/jsx-indent-props': ['off', 2],
 
     // Validate JSX has key prop when in array or iterator
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
@@ -76,7 +76,7 @@ module.exports = {
 
     // Limit maximum of props on a single line in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
-    'react/jsx-max-props-per-line': ['error', { maximum: 1, when: 'multiline' }],
+    'react/jsx-max-props-per-line': ['off', { maximum: 1, when: 'multiline' }],
 
     // Prevent usage of .bind() in JSX props
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
@@ -191,7 +191,7 @@ module.exports = {
     // Prevent missing props validation in a React component definition
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
     'react/prop-types': ['error', {
-      ignore: [],
+      ignore: ['className'],
       customValidators: [],
       skipUndeclared: false,
     }],
@@ -230,7 +230,7 @@ module.exports = {
 
     // Prevent missing parentheses around multilines JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
-    'react/jsx-wrap-multilines': ['error', {
+    'react/jsx-wrap-multilines': ['off', {
       declaration: true,
       assignment: true,
       return: true,
@@ -239,15 +239,15 @@ module.exports = {
 
     // Require that the first prop in a JSX element be on a new line when the element is multiline
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
-    'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
+    'react/jsx-first-prop-new-line': ['off', 'multiline-multiprop'],
 
     // Enforce spacing around jsx equals signs
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-equals-spacing.md
-    'react/jsx-equals-spacing': ['error', 'never'],
+    'react/jsx-equals-spacing': ['off', 'never'],
 
     // Enforce JSX indentation
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md
-    'react/jsx-indent': ['error', 2],
+    'react/jsx-indent': ['off', 2],
 
     // Disallow target="_blank" on links
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
@@ -306,7 +306,7 @@ module.exports = {
 
     // Validate whitespace in and around the JSX opening and closing brackets
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
-    'react/jsx-tag-spacing': ['error', {
+    'react/jsx-tag-spacing': ['off', {
       closingSlash: 'never',
       beforeSelfClosing: 'always',
       afterOpening: 'never',
@@ -323,7 +323,7 @@ module.exports = {
 
     // Enforce a defaultProps definition for every prop that is not a required prop
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
-    'react/require-default-props': 'error',
+    'react/require-default-props': 'off',
 
     // Forbids using non-exported propTypes
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-foreign-prop-types.md

@@ -38,7 +38,7 @@ module.exports = {
 
     // disallow process.exit()
     // https://eslint.org/docs/rules/no-process-exit
-    'no-process-exit': 'error',
+    'no-process-exit': 'off',
 
     // restrict usage of specified node modules
     // https://eslint.org/docs/rules/no-restricted-modules

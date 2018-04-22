@@ -76,7 +76,7 @@ module.exports = {
 
     // disallow unnecessary semicolons
     // https://eslint.org/docs/rules/no-extra-semi
-    'no-extra-semi': 'error',
+    'no-extra-semi': 'off',
 
     // disallow overwriting functions written as function declarations
     // https://eslint.org/docs/rules/no-func-assign
@@ -116,7 +116,7 @@ module.exports = {
 
     // Avoid code that looks like two expressions but is actually one
     // https://eslint.org/docs/rules/no-unexpected-multiline
-    'no-unexpected-multiline': 'error',
+    'no-unexpected-multiline': 'off',
 
     // disallow unreachable statements after a return, throw, continue, or break statement
     // https://eslint.org/docs/rules/no-unreachable

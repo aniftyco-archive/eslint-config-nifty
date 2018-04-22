@@ -3,19 +3,19 @@ module.exports = {
     // enforces no braces where they can be omitted
     // https://eslint.org/docs/rules/arrow-body-style
     // TODO: enable requireReturnForObjectLiteral?
-    'arrow-body-style': ['error', 'as-needed', {
+    'arrow-body-style': ['off', 'as-needed', {
       requireReturnForObjectLiteral: false,
     }],
 
     // require parens in arrow function arguments
     // https://eslint.org/docs/rules/arrow-parens
-    'arrow-parens': ['error', 'as-needed', {
+    'arrow-parens': ['off', 'as-needed', {
       requireForBlockBody: true,
     }],
 
     // require space before/after arrow function's arrow
     // https://eslint.org/docs/rules/arrow-spacing
-    'arrow-spacing': ['error', { before: true, after: true }],
+    'arrow-spacing': ['off', { before: true, after: true }],
 
     // verify super() callings in constructors
     // https://eslint.org/docs/rules/constructor-super
@@ -23,7 +23,7 @@ module.exports = {
 
     // enforce the spacing around the * in generator functions
     // https://eslint.org/docs/rules/generator-star-spacing
-    'generator-star-spacing': ['error', { before: false, after: true }],
+    'generator-star-spacing': ['off', { before: false, after: true }],
 
     // disallow modifying variables of class declarations
     // https://eslint.org/docs/rules/no-class-assign
@@ -145,7 +145,7 @@ module.exports = {
 
     // enforce spacing between object rest-spread
     // https://eslint.org/docs/rules/rest-spread-spacing
-    'rest-spread-spacing': ['error', 'never'],
+    'rest-spread-spacing': ['off', 'never'],
 
     // import sorting
     // https://eslint.org/docs/rules/sort-imports
@@ -161,7 +161,7 @@ module.exports = {
 
     // enforce usage of spacing in template strings
     // https://eslint.org/docs/rules/template-curly-spacing
-    'template-curly-spacing': 'error',
+    'template-curly-spacing': 'off',
 
     // enforce spacing around the * in yield* expressions
     // https://eslint.org/docs/rules/yield-star-spacing

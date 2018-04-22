@@ -168,13 +168,13 @@ module.exports = {
 
     // disallow use of multiple spaces
     // https://eslint.org/docs/rules/no-multi-spaces
-    'no-multi-spaces': ['error', {
+    'no-multi-spaces': ['off', {
       ignoreEOLComments: false,
     }],
 
     // disallow use of multiline strings
     // https://eslint.org/docs/rules/no-multi-str
-    'no-multi-str': 'error',
+    'no-multi-str': 'off',
 
     // disallow use of new operator when not part of the assignment or comparison
     // https://eslint.org/docs/rules/no-new
