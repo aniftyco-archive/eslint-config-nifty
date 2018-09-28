@@ -32,7 +32,6 @@
   },
   "dependencies": {
     "babel-eslint": "^8.2.1",
-    "confusing-browser-globals": "^0.0.0",
     "eslint-plugin-prettier": "^2.7.0"
   },
   "devDependencies": {
