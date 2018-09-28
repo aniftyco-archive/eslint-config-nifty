@@ -1,26 +1,18 @@
+const restrictedGlobals = require('confusing-browser-globals');
+
 module.exports = {
-  plugins: [
-    'import',
-    'prefer-object-spread',
-    'promise',
-    'sort-class-members',
-    'unicorn'
-  ],
   extends: [
-    './rules/best-practices',
-    './rules/errors',
-    './rules/es6',
-    './rules/imports',
-    './rules/node',
-    './rules/promises',
-    './rules/variables',
-  ].map(require.resolve),
+    'plugin:prettier/recommended',
+  ],
   parser: 'babel-eslint',
   env: {
-    es6: true
+    es6: true,
+    browser: true,
+    node: true,
+    jest: true,
   },
   parserOptions: {
-    ecmaVersion: 2017,
+    ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {
       generators: false,
@@ -30,5 +22,8 @@ module.exports = {
   },
   rules: {
     strict: 'error',
+    'no-restricted-globals': ['error'].concat(restrictedGlobals),
+    'no-undef': 'error',
+    'no-unused-vars': 'error',
   },
 };
