@@ -1,10 +1,14 @@
-module.exports = {
+import { Linter } from 'eslint';
+
+const config: Linter.Config = {
+  extends: ['./', 'plugin:react/recommended'],
+  plugins: ['react-hooks'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
+      useJSXTextNode: true,
     },
   },
-  extends: ['./index.js', 'plugin:react/recommended'],
   settings: {
     react: {
       pragma: 'React',
@@ -15,3 +19,5 @@ module.exports = {
     'react/prop-types': 'off',
   },
 };
+
+export = config;

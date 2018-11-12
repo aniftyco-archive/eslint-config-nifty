@@ -1,48 +1,62 @@
 {
   "name": "eslint-config-nifty",
   "version": "2.0.0",
-  "description": "NiftyCo's JavaScript ESLint shared config.",
-  "main": "index.js",
+  "description": "NiftyCo's JavaScript/TypeScript ESLint shared config.",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf tsconfig.tsbuildinfo dist/ && tsc",
+    "lint": "eslint src/*"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aniftyco/eslint-config-nifty.git"
-  },
-  "keywords": [
-    "eslint",
-    "eslintconfig",
-    "config",
-    "niftyco",
-    "javascript"
-  ],
-  "files": [
-    "index.js",
-    "react.js"
-  ],
-  "author": "Josh Manders (https://twitter.com/joshmanders)",
+  "repository": "aniftyco/eslint-config-nifty",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/aniftyco/eslint-config-nifty/issues"
-  },
-  "homepage": "https://github.com/aniftyco/eslint-config-nifty",
   "engines": {
     "node": ">= 8"
   },
+  "keywords": [
+    "eslint",
+    "tslint",
+    "eslintconfig",
+    "tslintconfig",
+    "config",
+    "niftyco",
+    "javascript",
+    "typescript"
+  ],
+  "files": [
+    "dist/"
+  ],
+  "author": {
+    "name": "Nifty Development, LLC",
+    "email": "support@aniftyco.com",
+    "url": "https://aniftyco.com"
+  },
+  "contributors": [
+    {
+      "name": "Josh Manders",
+      "url": "https://twitter.com/joshmanders"
+    }
+  ],
   "dependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint-config-prettier": "^3.1.0",
-    "eslint-plugin-prettier": "^2.7.0"
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^2.7.0",
+    "@typescript-eslint/parser": "^2.7.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "tslint": "^5.20.1"
   },
   "devDependencies": {
-    "eslint": "^5.8.0",
-    "prettier": "^1.14.3"
+    "@types/eslint": "^6.1.3",
+    "@types/node": "^12.12.7",
+    "eslint": "^6.6.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "typescript": "^3.7.2"
   },
   "peerDependencies": {
     "eslint": "^5.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.6.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
     "prettier": "^1.14.3"
   }
 }

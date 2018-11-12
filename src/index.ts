@@ -1,3 +1,5 @@
+import { Linter } from 'eslint';
+
 const restrictedGlobals = [
   'addEventListener',
   'blur',
@@ -59,9 +61,10 @@ const restrictedGlobals = [
   'top',
 ];
 
-module.exports = {
-  extends: ['plugin:prettier/recommended'],
-  parser: 'babel-eslint',
+const config: Linter.Config = {
+  extends: ['plugin:@typescript-eslint/recommended', 'prettier', 'prettier/@typescript-eslint'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
   env: {
     es6: true,
     browser: true,
@@ -69,17 +72,16 @@ module.exports = {
     jest: true,
   },
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2019,
     sourceType: 'module',
     ecmaFeatures: {
-      generators: false,
-      experimentalObjectRestSpread: true,
-      objectLiteralDuplicateProperties: false,
+      jsx: false,
     },
+    project: './tsconfig.json',
   },
   rules: {
     strict: 'error',
-    'no-restricted-globals': ['error'].concat(restrictedGlobals),
+    'no-restricted-globals': ['error', ...restrictedGlobals],
     'no-undef': 'error',
     'no-unused-vars': [
       'error',
@@ -91,3 +93,5 @@ module.exports = {
     ],
   },
 };
+
+export = config;
