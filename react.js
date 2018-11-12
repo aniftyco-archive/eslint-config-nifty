@@ -4,14 +4,14 @@ module.exports = {
       jsx: true,
     },
   },
-  extends: [
-    './index.js',
-    'plugin:react/recommended',
-  ],
+  extends: ['./index.js', 'plugin:react/recommended'],
   settings: {
     react: {
       pragma: 'React',
       version: '16.0',
     },
+  },
+  rules: {
+    'react/prop-types': 'off',
   },
 };
