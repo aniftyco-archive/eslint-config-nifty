@@ -23,7 +23,8 @@
     "typescript"
   ],
   "files": [
-    "dist/"
+    "dist/",
+    "react.js"
   ],
   "author": {
     "name": "Nifty Development, LLC",
