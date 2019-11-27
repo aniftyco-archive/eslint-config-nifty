@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rimraf tsconfig.tsbuildinfo dist/ && tsc",
-    "lint": "eslint src/*"
+    "lint": "eslint src/*",
+    "prepublishOnly": "yarn build"
   },
   "repository": "aniftyco/eslint-config-nifty",
   "license": "MIT",
