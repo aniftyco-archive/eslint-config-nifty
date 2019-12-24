@@ -1,7 +1,7 @@
 import { Linter } from 'eslint';
 
 const config: Linter.Config = {
-  extends: ['./dist/base', 'plugin:react/recommended'],
+  extends: ['.', 'plugin:react/recommended'],
   plugins: ['react-hooks'],
   parserOptions: {
     ecmaFeatures: {
