@@ -2,7 +2,7 @@
   "name": "eslint-config-nifty",
   "version": "3.0.0-rc.3",
   "description": "NiftyCo's JavaScript/TypeScript ESLint shared config.",
-  "main": "dist/index.js",
+  "main": "dist/base.js",
   "scripts": {
     "build": "rimraf tsconfig.tsbuildinfo dist/ && tsc",
     "lint": "eslint src/*",
