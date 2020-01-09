@@ -77,7 +77,6 @@ const config: Linter.Config = {
     ecmaFeatures: {
       jsx: false,
     },
-    project: './tsconfig.json',
   },
   rules: {
     strict: 'error',
