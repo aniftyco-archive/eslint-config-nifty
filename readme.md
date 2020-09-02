@@ -13,6 +13,6 @@ Our default export contains all of our ESLint rules, including ECMAScript 6+. It
 
 We also provide added linting for React.
 
-For React only development, you'll need to install `eslint-plugin-react` and `eslint-plugin-jsx-a11y`.
+For React only development, you'll need to install `eslint-plugin-react`, `eslint-plugin-jsx-a11y` and `eslint-plugin-react-hooks`.
 
 Then add `"extends": ["nifty/react"]` to your `.eslintrc`.
