@@ -74,6 +74,7 @@ const config: Linter.Config = {
   parserOptions: {
     ecmaVersion: 2019,
     sourceType: 'module',
+    project: './tsconfig.json',
     ecmaFeatures: {
       jsx: false,
     },

@@ -38,10 +38,7 @@
     "react.js"
   ],
   "eslintConfig": {
-    "extends": "./dist/base.js",
-    "parserOptions": {
-      "project": "./tsconfig.json"
-    }
+    "extends": "./dist/base.js"
   },
   "prettier": {
     "singleQuote": true
