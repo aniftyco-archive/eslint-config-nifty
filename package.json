@@ -3,7 +3,7 @@
   "description": "NiftyCo's TypeScript ESLint shared config",
   "version": "3.2.0",
   "repository": "aniftyco/eslint-config-nifty",
-  "main": "dist/base.js",
+  "main": "lib/base.js",
   "author": {
     "name": "Nifty Development, LLC",
     "email": "support@aniftyco.com",
@@ -16,7 +16,7 @@
     }
   ],
   "scripts": {
-    "build": "rimraf dist && tsc",
+    "build": "rimraf lib && tsc",
     "lint": "eslint src/*",
     "prepublishOnly": "yarn build"
   },
@@ -34,11 +34,11 @@
     "typescript"
   ],
   "files": [
-    "dist/",
+    "lib/",
     "react.js"
   ],
   "eslintConfig": {
-    "extends": "./dist/base.js"
+    "extends": "./lib/base.js"
   },
   "prettier": {
     "singleQuote": true

@@ -1,23 +1,14 @@
 {
   "compilerOptions": {
-    "composite": true,
-    "target": "es2016",
+    "target": "es5",
+    "lib": ["esnext", "esnext.asynciterable"],
     "module": "commonjs",
     "moduleResolution": "node",
-    "importHelpers": true,
-    "strict": true,
-    "noImplicitAny": false,
-    "experimentalDecorators": false,
-    "emitDecoratorMetadata": false,
-    "pretty": true,
-    "removeComments": false,
-    "sourceMap": true,
+    "esModuleInterop": true,
     "declaration": true,
-    "declarationMap": true,
-    "skipLibCheck": true,
-    "lib": ["esnext"],
     "rootDir": "./src",
-    "outDir": "./dist"
+    "outDir": "./lib",
+    "types": ["node"]
   },
   "include": ["src/**/*"]
 }
