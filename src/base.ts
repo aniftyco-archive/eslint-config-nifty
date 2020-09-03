@@ -127,12 +127,11 @@ const config: Linter.Config = {
     '@typescript-eslint/no-for-in-array': 'error',
     '@typescript-eslint/no-misused-promises': 'error',
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
-    '@typescript-eslint/no-unused-vars': [
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars-experimental': [
       'error',
       {
-        vars: 'all',
-        args: 'after-used',
-        ignoreRestSiblings: true,
+        ignoreArgsIfArgsAfterAreUsed: true,
       },
     ],
     '@typescript-eslint/ban-types': [
