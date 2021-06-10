@@ -26,6 +26,7 @@ const config: Linter.Config = {
     'react/prefer-stateless-function': 'error',
     'react/self-closing-comp': 'error',
     'react/jsx-boolean-value': ['error', 'always'],
+    'react/react-in-jsx-scope': 'off',
   },
 };
 
