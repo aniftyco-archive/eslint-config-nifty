@@ -10,5 +10,5 @@
     "outDir": "./lib",
     "types": ["node"]
   },
-  "include": ["src/**/*"]
+  "include": ["react.js", "src/**/*"]
 }
