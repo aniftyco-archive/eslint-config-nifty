@@ -62,7 +62,7 @@ const restrictedGlobals = [
 ];
 
 const config: Linter.Config = {
-  extends: ['prettier', 'prettier/@typescript-eslint'],
+  extends: ['prettier'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   env: {
