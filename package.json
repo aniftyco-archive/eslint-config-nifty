@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-nifty",
   "description": "NiftyCo's TypeScript ESLint shared config",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "repository": "aniftyco/eslint-config-nifty",
   "main": "lib/base.js",
   "author": {
