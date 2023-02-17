@@ -65,6 +65,7 @@ const config: Linter.Config = {
   extends: ['prettier'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
+  ignorePatterns: ['**/*.js', '**/*.jsx'],
   env: {
     es6: true,
     browser: true,

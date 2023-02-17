@@ -1,6 +1,6 @@
 # eslint-config-nifty
 
-NiftyCo's TypeScript ESLint shared config.
+> ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) for NiftyCo projects
 
 ## Usage
 
@@ -13,6 +13,7 @@ Our default export contains all of our ESLint rules, including ECMAScript 6+. It
 
 We also provide added linting for React.
 
-For React only development, you'll need to install `eslint-plugin-react`, `eslint-plugin-jsx-a11y` and `eslint-plugin-react-hooks`.
+For React only development, you'll need to install `eslint-plugin-react`, `eslint-plugin-jsx-a11y` and
+`eslint-plugin-react-hooks`.
 
 Then add `"extends": ["nifty/react"]` to your eslint config.

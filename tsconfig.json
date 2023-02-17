@@ -1,14 +1,9 @@
 {
+  "extends": "@aniftyco/tsconfig",
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["esnext", "esnext.asynciterable"],
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
     "declaration": true,
-    "rootDir": "./src",
-    "outDir": "./lib",
-    "types": ["node"]
+    "outDir": "./dist",
+    "rootDir": "./src"
   },
-  "include": ["react.js", "src/**/*"]
+  "include": ["src/**/*"]
 }

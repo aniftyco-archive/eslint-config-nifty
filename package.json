@@ -3,7 +3,6 @@
   "description": "NiftyCo's TypeScript ESLint shared config",
   "version": "3.3.1",
   "repository": "aniftyco/eslint-config-nifty",
-  "main": "lib/base.js",
   "author": {
     "name": "Nifty Development, LLC",
     "email": "support@aniftyco.com",
@@ -16,12 +15,16 @@
     }
   ],
   "scripts": {
-    "build": "rimraf lib && tsc",
+    "build": "rimraf dist && tsc -p tsconfig.json",
     "lint": "eslint src/*",
     "prepublishOnly": "npm run build"
   },
   "engines": {
     "node": ">= 16"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./react": "./dist/react.js"
   },
   "keywords": [
     "eslint",
@@ -34,37 +37,53 @@
     "typescript"
   ],
   "files": [
-    "lib/",
-    "react.js"
+    "dist/"
   ],
   "eslintConfig": {
-    "extends": "./lib/base.js"
+    "extends": "./dist/index.js"
   },
-  "prettier": {
-    "printWidth": 120,
-    "singleQuote": true
-  },
+  "prettier": "@aniftyco/prettier",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.20.0",
-    "@typescript-eslint/parser": "^5.20.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0"
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1"
   },
   "devDependencies": {
-    "@types/eslint": "^8.4.1",
+    "@aniftyco/prettier": "^0.1.0",
+    "@aniftyco/tsconfig": "^0.1.0",
+    "@types/eslint": "^8.21.1",
     "@types/node": "^16.11.27",
-    "eslint": "^8.13.0",
-    "prettier": "^2.6.2",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.6.3"
+    "eslint": "^8.34.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.4",
+    "rimraf": "^4.1.2",
+    "typescript": "^4.9.5"
   },
   "peerDependencies": {
-    "eslint": "^8.13.0",
-    "prettier": "^2.1.1"
+    "eslint": "^8.34.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.4"
   },
-  "optionalDependencies": {
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-react-hooks": "^4.1.0"
+  "peerDependenciesMeta": {
+    "eslint": {
+      "optional": false
+    },
+    "prettier": {
+      "optional": false
+    },
+    "eslint-plugin-jsx-a11y": {
+      "optional": true
+    },
+    "eslint-plugin-react": {
+      "optional": true
+    },
+    "eslint-plugin-react-hooks": {
+      "optional": true
+    }
   }
 }
