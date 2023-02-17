@@ -2,18 +2,46 @@
 
 > ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) for NiftyCo projects
 
+## Install
+
+```sh
+npm install --save-dev eslint-config-prettier
+```
+
 ## Usage
 
-Our default export contains all of our ESLint rules, including ECMAScript 6+. It requires `eslint` and `prettier`.
+Add some ESLint config to your `package.json`:
 
-1. Install it by running `npm i -D eslint-config-nifty@latest eslint prettier`.
-2. Add `"extends": ["nifty"]` to your eslint config.
+```json
+{
+  "name": "my-nifty-app",
+  "version": "1.2.4",
+  "eslintConfig": {
+    "extends": "nifty"
+  }
+}
+```
 
-## Additional linting
+or to `.eslintrc`:
 
-We also provide added linting for React.
+```json
+{
+  "extends": "nifty"
+}
+```
 
-For React only development, you'll need to install `eslint-plugin-react`, `eslint-plugin-jsx-a11y` and
-`eslint-plugin-react-hooks`.
+This package also exposes `nifty/react` if you're working in React codebases.
 
-Then add `"extends": ["nifty/react"]` to your eslint config.
+### Install additional dependencies
+
+```sh
+npm install --save-dev eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-react-hooks
+```
+
+Then extends `nifty/react` like so:
+
+```json
+{
+  "extends": "nifty/react"
+}
+```
