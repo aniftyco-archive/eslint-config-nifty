@@ -2,6 +2,9 @@
 
 > ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) for NiftyCo projects
 
+> [!IMPORTANT]
+> We no longer use eslint in our projects, feel free to continue to use this but it wont get updated.
+
 ## Install
 
 ```sh
